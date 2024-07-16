@@ -68,15 +68,12 @@
             <h2>关于我们</h2>
             <p>这里是如月晴人和白苒的赛博日记存档处，无关人员请勿进入>< </p >
         </section>
-        <section id="archive">
+        <section id="diary">
             <h2>日记本</h2>
             <div class="password-form">
                 <label for="password">月满枝头的日子:</label>
                 <input type="password" id="password">
                 <button onclick="checkPassword()">提交</button>
-            </div>
-            <div class="protected-content" id="protected-content">
-                <p>这里是一些文字和图片资料存档...</p >
             </div>
         </section>
         <section id="projects">
@@ -91,9 +88,10 @@
         function checkPassword() {
             const password = document.getElementById('password').value;
             if (password === '20221004') {
-                document.getElementById('protected-content').style.display = 'block';
+                window.location.href = 'diary.html';  // 跳转到新的子页面
             } else {
-                alert('密码错误')            }
+                alert('密码错误');
+            }
         }
     </script>
 </body>
